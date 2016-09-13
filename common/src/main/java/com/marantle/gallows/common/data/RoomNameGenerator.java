@@ -14,7 +14,7 @@ public class RoomNameGenerator {
 		long loopCount = 0;
 		do {
 			loopCount++;
-			newName = Adjectives.getOne() + " " + Nouns.getOne();
+			newName = AdjectiveData.getOne() + " " + NounData.getOne();
 		} while (usedNames.contains(newName) && loopCount < 100000);
 		return newName;
 	}

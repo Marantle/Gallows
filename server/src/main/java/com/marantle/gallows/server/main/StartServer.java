@@ -31,8 +31,13 @@ public class StartServer {
 
 		Config.configure(server.getKryo());
 		RequestHandler requestHandler = new RequestHandler();
-		String roomName = RoomNameGenerator.getOne();
-		logger.info("We got a room {}", roomName);
+		String roomName;
+		int i = 0;
+		while (i < 100) {
+			i++;
+			roomName = RoomNameGenerator.getOne();
+			logger.info("We got a name {}", roomName);
+		}
 		Pool.saveRoom(new Room("Lobby"));
 		server.addListener(new Listener() {
 			public void received(Connection connection, Object object) {
