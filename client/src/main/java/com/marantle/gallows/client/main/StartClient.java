@@ -12,10 +12,6 @@ import java.util.Properties;
 public class StartClient extends Application {
 	@Override
 	public void start(Stage primaryStage) {
-
-		Properties prop = new Properties();
-//		prop.load(getClass().getClassLoader().getResourceAsStream("log4j.properties"));
-		PropertyConfigurator.configure(StartClient.class.getClassLoader().getResource("log4j.properties"));
 		try {
 			FXMLLoader loginLoader = new FXMLLoader();
 			loginLoader.setLocation(getClass().getResource("loginview.fxml"));
