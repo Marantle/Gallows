@@ -1,11 +1,11 @@
-package com.marantle.gallows.lib.networking;
+package com.marantle.gallows.common.networking;
 
 import com.esotericsoftware.kryo.Kryo;
-import com.marantle.gallows.lib.model.Player;
-import com.marantle.gallows.lib.model.Room;
-import com.marantle.gallows.lib.packets.GallowsRequest;
-import com.marantle.gallows.lib.packets.GallowsResponse;
-import com.marantle.gallows.lib.packets.PacketType;
+import com.marantle.gallows.common.model.Player;
+import com.marantle.gallows.common.model.Room;
+import com.marantle.gallows.common.packets.GallowsRequest;
+import com.marantle.gallows.common.packets.GallowsResponse;
+import com.marantle.gallows.common.packets.PacketType;
 
 import java.util.ArrayList;
 

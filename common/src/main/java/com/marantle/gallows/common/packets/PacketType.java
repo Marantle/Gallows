@@ -1,4 +1,4 @@
-package com.marantle.gallows.lib.packets;
+package com.marantle.gallows.common.packets;
 
 /**
  * Created by mlpp on 7.9.2016.

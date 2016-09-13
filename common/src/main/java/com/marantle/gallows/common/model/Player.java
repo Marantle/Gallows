@@ -1,7 +1,7 @@
-package com.marantle.gallows.lib.model;
+package com.marantle.gallows.common.model;
 
 import com.esotericsoftware.kryonet.Connection;
-import com.marantle.gallows.lib.packets.GallowsRequest;
+import com.marantle.gallows.common.packets.GallowsRequest;
 
 import java.util.Objects;
 

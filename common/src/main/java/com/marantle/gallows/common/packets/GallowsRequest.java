@@ -1,4 +1,4 @@
-package com.marantle.gallows.lib.packets;
+package com.marantle.gallows.common.packets;
 
 public class GallowsRequest {
 

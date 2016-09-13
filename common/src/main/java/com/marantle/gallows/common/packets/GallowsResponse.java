@@ -1,6 +1,6 @@
-package com.marantle.gallows.lib.packets;
+package com.marantle.gallows.common.packets;
 
-import com.marantle.gallows.lib.model.Player;
+import com.marantle.gallows.common.model.Player;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,9 +2,9 @@ package com.marantle.gallows.server.storage;
 
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.minlog.Log;
-import com.marantle.gallows.lib.model.Player;
-import com.marantle.gallows.lib.model.Room;
-import com.marantle.gallows.lib.packets.GallowsResponse;
+import com.marantle.gallows.common.model.Player;
+import com.marantle.gallows.common.model.Room;
+import com.marantle.gallows.common.packets.GallowsResponse;
 
 import java.util.HashSet;
 import java.util.Set;

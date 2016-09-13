@@ -1,4 +1,4 @@
-package com.marantle.gallows.lib.model;
+package com.marantle.gallows.common.model;
 
 /**
  * Created by mlpp on 7.9.2016.

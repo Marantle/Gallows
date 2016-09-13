@@ -2,10 +2,10 @@ package com.marantle.gallows.server.test;
 
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.minlog.Log;
-import com.marantle.gallows.lib.model.Player;
-import com.marantle.gallows.lib.packets.GallowsRequest;
-import com.marantle.gallows.lib.packets.GallowsResponse;
-import com.marantle.gallows.lib.packets.PacketType;
+import com.marantle.gallows.common.model.Player;
+import com.marantle.gallows.common.packets.GallowsRequest;
+import com.marantle.gallows.common.packets.GallowsResponse;
+import com.marantle.gallows.common.packets.PacketType;
 import com.marantle.gallows.server.storage.Pool;
 
 import java.time.LocalTime;

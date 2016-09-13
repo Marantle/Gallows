@@ -4,9 +4,9 @@ import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
 import com.esotericsoftware.kryonet.Server;
 import com.esotericsoftware.minlog.Log;
-import com.marantle.gallows.lib.networking.Config;
-import com.marantle.gallows.lib.packets.GallowsRequest;
-import com.marantle.gallows.lib.packets.GallowsResponse;
+import com.marantle.gallows.common.networking.Config;
+import com.marantle.gallows.common.packets.GallowsRequest;
+import com.marantle.gallows.common.packets.GallowsResponse;
 import com.marantle.gallows.server.storage.Pool;
 import com.marantle.gallows.server.test.RequestHandler;
 
