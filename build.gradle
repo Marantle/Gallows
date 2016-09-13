@@ -1,20 +1,29 @@
-
 subprojects {
 
-  apply plugin: "java"
-  apply plugin: 'idea'
+    apply plugin: "java"
+    apply plugin: 'idea'
 
-  sourceCompatibility = '1.8'
-  targetCompatibility = '1.8'
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
 
-  repositories {
-    mavenCentral()
-  }
+    repositories {
+        jcenter()
+    }
 
-  dependencies {
-     testCompile "junit:junit:4+"
-  }
+    dependencies {
+        compile 'com.esotericsoftware:kryonet:2.22.0-RC1'
+        compile 'com.google.guava:guava:19.0'
+        compile 'com.google.inject:guice:4.1.0'
+        // The production code uses the SLF4J logging API at compile time
+
+        compile 'org.slf4j:slf4j-api:1.7.13'
+        compile 'org.slf4j:slf4j-log4j12:1.7.13'
+        compile 'log4j:log4j:1.2.16'
+
+
+        testCompile "junit:junit:4+"
+    }
 }
 allprojects {
-  task hello << { task -> println "I'm $task.project.name" }
+    task hello << { task -> println "I'm $task.project.name" }
 }
