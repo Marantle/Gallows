@@ -15,6 +15,6 @@ include 'shared'
 include 'api'
 include 'services:webservice'
 */
-include ":libraries"
+include ":common"
 
 rootProject.name = 'client'
