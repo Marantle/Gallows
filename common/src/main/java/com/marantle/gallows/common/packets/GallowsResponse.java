@@ -1,6 +1,7 @@
 package com.marantle.gallows.common.packets;
 
 import com.marantle.gallows.common.model.Player;
+import com.marantle.gallows.common.model.Room;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,7 @@ public class GallowsResponse {
 	private String text;
 	private PacketType packetType;
 	private List<Player> playersList = new ArrayList<>();
+	private List<Room> roomList = new ArrayList<>();
 
 	public GallowsResponse(String text, PacketType packetType) {
 		this.text = text;
@@ -44,5 +46,13 @@ public class GallowsResponse {
 
 	public void setPlayersList(List<Player> playersList) {
 		this.playersList = playersList;
+	}
+
+	public List<Room> getRoomList() {
+		return roomList;
+	}
+
+	public void setRoomList(List<Room> roomList) {
+		this.roomList = roomList;
 	}
 }

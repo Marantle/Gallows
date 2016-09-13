@@ -149,11 +149,6 @@ public class MainController {
         });
     }
 
-    private void populateRoomList(GallowsResponse response) {
-
-
-    }
-
     @FXML
     void sendRequest(ActionEvent actionEvent) {
         GallowsRequest request = new GallowsRequest();
@@ -202,7 +197,7 @@ public class MainController {
         GallowsRequest request = new GallowsRequest();
         request.setPlayerName(getUserName());
         request.setMsg("Initialize connection");
-        request.setRoom("test");
+        request.setRoom("Lobby");
         request.setPacketType(PacketType.CONNECT);
         client.sendTCP(request);
     }
@@ -211,7 +206,12 @@ public class MainController {
         List<Player> players = response.getPlayersList();
         players.forEach(p -> logger.info(p.toString()));
         Platform.runLater(() -> playerListView.getItems().setAll(players));
+    }
 
+    private void populateRoomList(GallowsResponse response) {
+        List<Room> rooms = response.getRoomList();
+        rooms.forEach(p -> logger.info(p.toString()));
+        Platform.runLater(() -> roomListView.getItems().setAll(rooms));
     }
 
     private void requestToJoinRoom() {
@@ -230,7 +230,7 @@ public class MainController {
     private void requestRooms() {
         GallowsRequest request = new GallowsRequest();
         request.setPacketType(PacketType.LIST_ROOMS);
-        logArea.appendText("Requesting rooms\n");
+        Platform.runLater(() -> logArea.appendText("Requesting rooms\n"));
         client.sendTCP(request);
     }
 
