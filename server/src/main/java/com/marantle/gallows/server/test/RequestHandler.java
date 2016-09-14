@@ -6,7 +6,10 @@ import com.marantle.gallows.common.model.Player;
 import com.marantle.gallows.common.packets.GallowsRequest;
 import com.marantle.gallows.common.packets.GallowsResponse;
 import com.marantle.gallows.common.packets.PacketType;
+import com.marantle.gallows.server.main.StartServer;
 import com.marantle.gallows.server.storage.Pool;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -20,6 +23,7 @@ import static com.marantle.gallows.server.storage.Pool.getPlayers;
  * Created by mlpp on 7.9.2016.
  */
 public class RequestHandler {
+	private static final Logger logger = LoggerFactory.getLogger(RequestHandler.class);
 	public RequestHandler() {
 
 	}
@@ -76,8 +80,10 @@ public class RequestHandler {
 				boolean test2 = Pool.getConnectionByID(p.getConnectionID()).isConnected();
 				return test1 && test2;
 			});
-			jeah.forEach(p -> Pool.getConnectionByID(p.getConnectionID())
-					.sendTCP(new GallowsResponse(msg)));
+			jeah.forEach(p -> {
+				logger.info("Sending chat message {} to user {}", msg, p.getPlayerName());
+				Pool.getConnectionByID(p.getConnectionID()).sendTCP(new GallowsResponse(msg, PacketType.CHAT));
+			});
 			response = null;
 			break;
 		}

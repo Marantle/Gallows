@@ -55,4 +55,15 @@ public class GallowsResponse {
 	public void setRoomList(List<Room> roomList) {
 		this.roomList = roomList;
 	}
+
+	@Override
+	public String toString() {
+		final StringBuilder sb = new StringBuilder("GallowsResponse{");
+		sb.append("text='").append(text).append('\'');
+		sb.append(", packetType=").append(packetType);
+		sb.append(", playersList=").append(playersList);
+		sb.append(", roomList=").append(roomList);
+		sb.append('}');
+		return sb.toString();
+	}
 }

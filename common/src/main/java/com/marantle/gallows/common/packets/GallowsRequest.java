@@ -41,5 +41,16 @@ public class GallowsRequest {
 	public String getRoom() {
 		return room;
 	}
+
+	@Override
+	public String toString() {
+		final StringBuilder sb = new StringBuilder("GallowsRequest{");
+		sb.append("playerName='").append(playerName).append('\'');
+		sb.append(", msg='").append(msg).append('\'');
+		sb.append(", packetType=").append(packetType);
+		sb.append(", room='").append(room).append('\'');
+		sb.append('}');
+		return sb.toString();
+	}
 }
 
