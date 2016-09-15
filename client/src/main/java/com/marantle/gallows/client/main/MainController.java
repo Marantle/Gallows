@@ -61,6 +61,7 @@ public class MainController {
 	private Thread thread;
 	private String userName;
 
+
 	public void setPort(int port) {
 		this.port = port;
 		logger.info(String.format("Input port was [%d], port is now [%d]", port, this.port));
@@ -151,7 +152,7 @@ public class MainController {
 
 	@FXML
 	void sendRequest(ActionEvent actionEvent) {
-		if (!Strings.isNulgitlOrEmpty(textFieldMsg.getText())) {
+		if (!Strings.isNullOrEmpty(textFieldMsg.getText())) {
 
 			GallowsRequest request = new GallowsRequest();
 			request.setPlayerName(getUserName());
